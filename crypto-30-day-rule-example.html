@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The 30-day rule for crypto (UK): a worked example | Gainsheet</title>
+<meta name="description" content="How HMRC's 30-day 'bed and breakfasting' rule shrinks a crypto loss when you buy back within 30 days, with a step-by-step worked example in pounds.">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://gainsheet.co.uk/crypto-30-day-rule-example.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Does the 30-day rule apply to crypto in the UK?","acceptedAnswer":{"@type":"Answer","text":"Yes. HMRC applies the same matching rules to cryptoassets as to shares: same-day acquisitions first, then acquisitions in the 30 days after the disposal, then the Section 104 pool (Cryptoassets Manual CRYPTO22200 onwards)."}},
+{"@type":"Question","name":"Does buying a different coin avoid the 30-day rule?","acceptedAnswer":{"@type":"Answer","text":"The rule matches disposals with acquisitions of the same type of token. Buying a different token is not matched, but check HMRC's guidance on what counts as the same asset for your position."}},
+{"@type":"Question","name":"Is the loss gone for good under the 30-day rule?","acceptedAnswer":{"@type":"Answer","text":"Usually not. The loss you expected is reduced now, but the higher cost of your older holding stays in your Section 104 pool and reduces the gain when you eventually sell it."}}
+]}
+</script>
+</head>
+<body>
+<header><a href="index.html">Gainsheet</a> · UK crypto tax, worked out</header>
+<main>
+<h1>The 30-day rule for crypto: a worked example</h1>
+<p class="lede">Sold crypto at a loss, then bought the same coin back a couple of weeks later? HMRC matches your sale to the <em>new</em> purchase, so most of the loss you were counting on disappears. Here's exactly how it works, in pounds.</p>
+
+<h2>The rule in one paragraph</h2>
+<p>When you dispose of a cryptoasset, HMRC doesn't let you pick which coins you sold. It matches the disposal in a fixed order (<a href="https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto22200">CRYPTO22200</a>):</p>
+<ol>
+<li><strong>Same day:</strong> coins of the same type bought on the same day as the sale.</li>
+<li><strong>Next 30 days:</strong> coins of the same type bought in the 30 days <em>after</em> the sale (earliest first). This is the "bed and breakfasting" or 30-day rule.</li>
+<li><strong>Section 104 pool:</strong> everything else, at your average cost. See <a href="section-104-pool-calculator-excel.html">how the Section 104 pool works</a>.</li>
+</ol>
+<p>The 30-day rule exists to stop people selling at a loss just before the tax year ends and buying straight back, so they bank a tax loss without really changing their position.</p>
+
+<h2>Worked example</h2>
+<p>You own 1 BTC. You bought it a while ago for £40,000, so your Section 104 pool is 1 BTC with a cost of £40,000.</p>
+<table>
+<tr><th>Date</th><th>What happened</th><th class="n">£</th></tr>
+<tr><td>10 May 2025</td><td>Sell 1 BTC</td><td class="n">30,000</td></tr>
+<tr><td>25 May 2025</td><td>Buy 1 BTC back</td><td class="n">31,000</td></tr>
+</table>
+
+<h3>What you might expect</h3>
+<p>Proceeds £30,000 minus cost £40,000 = a <strong>£10,000 loss</strong>.</p>
+
+<h3>What HMRC actually does</h3>
+<p>The 25 May purchase falls within 30 days after the sale, so the sale is matched with it, not with your pool.</p>
+<table>
+<tr><th>Step</th><th class="n">£</th></tr>
+<tr><td>Proceeds (10 May sale)</td><td class="n">30,000</td></tr>
+<tr><td>Matched cost (25 May buy)</td><td class="n">(31,000)</td></tr>
+<tr><td><strong>Allowable loss</strong></td><td class="n"><strong>(1,000)</strong></td></tr>
+</table>
+<p>Your loss is <strong>£1,000, not £10,000</strong>. And your Section 104 pool is untouched: it is still 1 BTC at a cost of £40,000. That's the coin you're now treated as holding.</p>
+
+<div class="box"><strong>So is the £9,000 lost forever?</strong> Usually not. It's still sitting in your pool cost. When you eventually sell that BTC, the £40,000 cost reduces your gain then. The 30-day rule mostly <em>moves</em> the loss into a later year; it doesn't delete it. But if you were relying on the loss this year (to cover other gains, say), the timing matters a lot.</div>
+
+<h2>Partial buy-backs</h2>
+<p>If you'd bought back only 0.4 BTC on 25 May, only 0.4 of the sale would be matched with it. The other 0.6 BTC would be matched with the pool at its average cost:</p>
+<table>
+<tr><th>Part of the sale</th><th class="n">Proceeds</th><th class="n">Cost</th><th class="n">Gain / (loss)</th></tr>
+<tr><td>0.4 BTC matched to 25 May buy (0.4 BTC for £12,400)</td><td class="n">12,000</td><td class="n">12,400</td><td class="n">(400)</td></tr>
+<tr><td>0.6 BTC matched to the pool (£40,000 × 0.6)</td><td class="n">18,000</td><td class="n">24,000</td><td class="n">(6,000)</td></tr>
+<tr><td><strong>Total</strong></td><td class="n"><strong>30,000</strong></td><td class="n"><strong>36,400</strong></td><td class="n"><strong>(6,400)</strong></td></tr>
+</table>
+
+<h2>Things that catch people out</h2>
+<ul>
+<li><strong>Swaps count as buys.</strong> If you swap ETH into BTC within 30 days of selling BTC, that BTC acquisition is matched just like a cash purchase.</li>
+<li><strong>Staking rewards and airdrops of the same coin</strong> can also be acquisitions in the 30-day window.</li>
+<li><strong>The order matters.</strong> Same-day matching happens first, then 30-day, then the pool. A spreadsheet that just uses "average cost" for everything will give the wrong answer.</li>
+<li><strong>It works across tax years.</strong> A sale on 1 April and a buy-back on 20 April are still matched, even though the buy-back is in the next tax year.</li>
+</ul>
+
+<h2>Doing this for a whole year of trades</h2>
+<p>For one sale it's easy. For a year of exchange trades, with swaps, partial buy-backs and fees, it gets fiddly fast. That's what <a href="https://gainsheet.gumroad.com/l/uk-crypto-tax">Gainsheet</a> is for: an Excel workbook that applies the same-day, 30-day and Section 104 rules in order, converts at Bank of England rates, and shows every match as a visible formula. It's useful whether you're doing your return yourself or checking what your software (or accountant) came up with.</p>
+
+<div class="cta">
+<strong>Free: the 7 rules that decide your UK crypto tax bill, on one page.</strong><br>
+<a class="btn" href="https://gainsheet.gumroad.com/l/crypto-tax-cheat-sheet">Get the free cheat sheet</a>
+<a class="btn" href="https://gainsheet.gumroad.com/l/uk-crypto-tax">See the workbook (£39)</a>
+</div>
+
+<h2>FAQ</h2>
+<h3>Does the 30-day rule apply to crypto in the UK?</h3>
+<p>Yes. HMRC applies the same matching rules to cryptoassets as it does to shares. See <a href="https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto22200">CRYPTO22200</a> onwards.</p>
+<h3>Does buying a different coin avoid it?</h3>
+<p>The rule matches disposals with acquisitions of the same type of token, so a different token isn't matched. Check HMRC's guidance on what counts as the same asset for your situation.</p>
+<h3>What about buying back <em>before</em> the sale?</h3>
+<p>Purchases before the sale (other than on the same day) go into the Section 104 pool and are matched at average cost. The 30-day rule only looks forward.</p>
+</main>
+<footer>General information about HMRC's published rules, not tax advice. Your own position may differ; check HMRC's Cryptoassets Manual or speak to an accountant. Rates and thresholds are for 2025/26. © 2026 Gainsheet.</footer>
+</body>
+</html>

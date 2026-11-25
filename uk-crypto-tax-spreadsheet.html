@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UK crypto tax spreadsheet (Excel) for 2025/26 | Gainsheet</title>
+<meta name="description" content="What a UK crypto tax spreadsheet has to do to get your capital gains right for 2025/26: HMRC's matching rules, pound values, the £3,000 allowance and the SA108 figures.">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://gainsheet.co.uk/uk-crypto-tax-spreadsheet.html">
+</head>
+<body>
+<header><a href="index.html">Gainsheet</a> · UK crypto tax, worked out</header>
+<main>
+<h1>A UK crypto tax spreadsheet for 2025/26</h1>
+<p class="lede">Plenty of people try to work out their crypto tax in a spreadsheet, and plenty of those spreadsheets give the wrong answer. Not because the maths is hard, but because HMRC's rules aren't the ones most people assume. Here's what a spreadsheet has to do to get it right, and a ready-made one if you'd rather not build it.</p>
+
+<h2>Do you even need to report?</h2>
+<p>For the 2025/26 tax year (6 April 2025 to 5 April 2026), you generally need to report crypto on your Self Assessment return if:</p>
+<ul>
+<li>your total gains are more than the <strong>£3,000</strong> annual exempt amount, or</li>
+<li>your total disposal proceeds are more than <strong>£50,000</strong>, even if you made no gain, or</li>
+<li>you want to claim a <strong>loss</strong> (losses must be claimed within 4 years to be usable).</li>
+</ul>
+<p>Capital gains tax on crypto is 18% within the basic-rate band and 24% above it. The deadline for the online return is <strong>31 January 2027</strong>.</p>
+
+<h2>What counts as a disposal</h2>
+<p>Not just selling for pounds. Each of these is a disposal that needs a pound value (<a href="https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto22100">CRYPTO22100</a>):</p>
+<ul>
+<li>selling crypto for pounds or any other currency;</li>
+<li>swapping one token for another, <strong>including into stablecoins</strong>;</li>
+<li>spending crypto on goods or services, <strong>including gas fees</strong>;</li>
+<li>giving crypto away (other than to a spouse or civil partner).</li>
+</ul>
+<p>Moving coins between your own wallets or exchanges isn't a disposal.</p>
+
+<h2>The five things your spreadsheet must do</h2>
+<table>
+<tr><th>#</th><th>Requirement</th><th>Why a simple sheet gets it wrong</th></tr>
+<tr><td>1</td><td>Value every trade in pounds on the day</td><td>Exchange exports are often in USD, EUR or another coin. You need a daily FX rate (Gainsheet uses Bank of England rates).</td></tr>
+<tr><td>2</td><td>Match same-day buys first</td><td>Most sheets skip this step entirely.</td></tr>
+<tr><td>3</td><td>Then match buys in the next 30 days</td><td>The "bed and breakfasting" rule. See <a href="crypto-30-day-rule-example.html">the worked example</a>.</td></tr>
+<tr><td>4</td><td>Then use the Section 104 pool at average cost</td><td>FIFO, LIFO or "the price I paid for that lot" are not allowed. See <a href="section-104-pool-calculator-excel.html">the pool explained</a>.</td></tr>
+<tr><td>5</td><td>Total it into the SA108 boxes</td><td>The return wants number of disposals, proceeds, allowable costs, gains and losses, not just "profit".</td></tr>
+</table>
+
+<h2>Building your own vs using a ready-made one</h2>
+<p>If you have a handful of trades on one exchange, a careful DIY sheet is fine: the <a href="section-104-pool-calculator-excel.html">Section 104 formulas</a> are only a few columns. It gets painful when you have:</p>
+<ul>
+<li>hundreds of trades, or several exchanges;</li>
+<li>swaps between tokens (each swap is a sale <em>and</em> a buy);</li>
+<li>buy-backs within 30 days of selling;</li>
+<li>trades in currencies other than pounds.</li>
+</ul>
+
+<h2>Gainsheet: the ready-made spreadsheet</h2>
+<p><a href="https://gainsheet.gumroad.com/l/uk-crypto-tax">Gainsheet</a> is an Excel workbook that does all five steps. Paste in your Coinbase, Kraken or Binance export (or type trades in, including DeFi), and it gives you a disposal-by-disposal schedule and the SA108 figures.</p>
+<ul>
+<li><strong>Shows its working:</strong> every match is a visible formula, so you (or your accountant) can check it. Handy as a second opinion on software output.</li>
+<li><strong>Private:</strong> no account, no wallet connections, no uploads. It's a file on your computer.</li>
+<li><strong>Pay once:</strong> £39, no subscription. A free Lite version handles 20 transactions.</li>
+<li><strong>Tested</strong> against HMRC's own worked examples, thousands of random test trades, and the builder's own 2025/26 return (153 disposals).</li>
+</ul>
+
+<div class="cta">
+<strong>Try before you buy.</strong><br>
+<a class="btn" href="https://gainsheet.gumroad.com/l/uk-crypto-tax-free">Free Lite workbook (20 trades)</a>
+<a class="btn" href="https://gainsheet.gumroad.com/l/crypto-tax-cheat-sheet">Free one-page cheat sheet</a>
+<a class="btn" href="https://gainsheet.gumroad.com/l/uk-crypto-tax">Full version, £39</a>
+</div>
+
+<h2>FAQ</h2>
+<h3>Does it work in Google Sheets?</h3>
+<p>No. It's built for desktop Microsoft Excel (2010 or later) and uses no macros.</p>
+<h3>Does it handle DeFi?</h3>
+<p>There's a DeFi tab for entering on-chain transactions by hand, with a short guide. Whether a particular DeFi action is a disposal is your judgement; HMRC's position is in <a href="https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto61000">CRYPTO61000</a> onwards. If you have thousands of on-chain transactions, wallet-syncing software is a better fit.</p>
+<h3>Is this tax advice?</h3>
+<p>No. It's a calculation tool that applies HMRC's published rules to the data you give it. For your own position, check HMRC's guidance or ask an accountant.</p>
+</main>
+<footer>General information about HMRC's published rules, not tax advice. Rates and thresholds are for 2025/26. © 2026 Gainsheet.</footer>
+</body>
+</html>
